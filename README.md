@@ -25,6 +25,43 @@ For animations please import the ```BrowserAnimationsModule```.
  Angular animations are built on top of the standard Web Animations API and run natively on browsers that support it.
 
 
+```Html
+<div *ngIf="showStepper">
+
+  <ngx-stepper #stepper>
+    <ngx-step [label]="'Setup your account'">
+    Step 1
+    </ngx-step>
+    <ngx-step [label]="'Privacy Policy'">
+    Step 2
+    </ngx-step>
+    <ngx-step [label]="'Terms of Service.'">
+    Step 3
+    </ngx-step>
+  </ngx-stepper>
+
+
+  <button (click)="stepper.prev()"> 
+    <-Back
+  </button>
+  
+  <button *ngIf="!stepper.lastStepActive" (click)="stepper.next()">
+     Next->
+  </button>
+
+  <button *ngIf="stepper.lastStepActive" (click)="showStepper = false">
+        Finish
+  </button>
+</div>
+
+<div *ngIf="!showStepper">
+  <h1>Registration Successful!</h1>
+  <button (click)="showStepper = true">back</button>
+</div>
+
+
+```
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4100/`. The app will automatically reload if you change any of the source files.
