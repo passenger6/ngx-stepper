@@ -26,7 +26,6 @@ For animations please import the ```BrowserAnimationsModule```.
 
 
 ```Html
-<div *ngIf="showStepper">
 
   <ngx-stepper #stepper>
     <ngx-step [label]="'Setup your account'">
@@ -49,15 +48,8 @@ For animations please import the ```BrowserAnimationsModule```.
      Next->
   </button>
 
-  <button *ngIf="stepper.lastStepActive" (click)="showStepper = false">
-        Finish
-  </button>
-</div>
 
-<div *ngIf="!showStepper">
-  <h1>Registration Successful!</h1>
-  <button (click)="showStepper = true">back</button>
-</div>
+
 
 
 ```
