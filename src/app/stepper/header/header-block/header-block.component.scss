@@ -1,0 +1,46 @@
+.step {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.step-number {
+  height: 30px;
+  line-height: 30px;
+  width: 30px;
+  font-size: 16px;
+  border-radius: 50%;
+  text-align: center;
+  color: #fafafa;
+  fill: #e1e1e1;
+  display: block;
+  user-select: none;
+
+}
+
+.step-title {
+  color: #d3d3d3;
+  padding-left: 14px;
+}
+
+.isActive, .completed {
+  .step-title {
+    color: black;
+
+  }
+  .step-number {
+    color: rgb(2, 117, 216);
+    fill: rgb(2, 117, 216);
+  }
+}
+
+.complete {
+
+}
+
+.vertical-line {
+  border-left: 1px solid #d3d3d3;
+  height: 10px;
+  margin-left: 16px;
+  padding-left: 16px;
+}

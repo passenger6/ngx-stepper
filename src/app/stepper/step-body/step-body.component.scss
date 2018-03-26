@@ -1,0 +1,23 @@
+:host {
+    transition: height .2s cubic-bezier(.35, 0, .25, 1);
+    flex-grow: 1;
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    &.active {
+        position: relative;
+        overflow-x: hidden;
+        overflow-y: auto;
+        z-index: 1;
+        flex-grow: 1;
+    }
+}
+
+.step-body-content {
+    position: relative;
+    z-index: 2;
+}

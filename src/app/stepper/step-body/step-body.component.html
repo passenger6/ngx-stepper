@@ -1,0 +1,9 @@
+<div
+  [@translateStep]="stepPosition"
+  (@translateStep.done)="_onTranslateStepDone($event)"
+  (@translateStep.start)="_onTranslateStepStart($event)"
+  #stepBodyContent
+  class="step-body-content"
+>
+  <ng-template *ngxOutlet=""></ng-template>
+  </div>

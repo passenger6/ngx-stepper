@@ -1,0 +1,17 @@
+<ng-container *ngFor="let step of stepList; let i = index; let lastHeader = last">
+
+
+    <ngx-header-block
+            [stepIndex]="i"
+            [activeStep]="activeStep"
+            [last]="lastHeader"
+            [finished]="finished"
+    >
+        {{step.label}}
+    </ngx-header-block>
+
+    <div class="step-space-between" *ngIf=" i < stepList.length-1 ">
+        <span class="step-line"></span>
+    </div>
+
+</ng-container>

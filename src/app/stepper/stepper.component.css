@@ -1,0 +1,11 @@
+:host {
+    display: flex;
+    flex-direction: column;
+}
+
+.ngx-step-body-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    transition: height .2s cubic-bezier(.35, 0, .25, 1);
+}

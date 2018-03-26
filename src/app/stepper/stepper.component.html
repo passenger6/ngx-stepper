@@ -1,0 +1,17 @@
+<ngx-step-header
+ *ngIf="true"
+ [stepList]="steps"
+ [activeStep]="activeStep"
+ [finished]="activeStep === steps.length">
+</ngx-step-header>
+
+
+<div class="ngx-step-body-wrapper" #stepBodyWrapper>
+  <ngx-step-body
+   *ngFor="let step of steps; let i = index;"
+   [template]='step.tpl' [active]="activeStep === i"
+   [position]="step.position"
+   (transitionStart)="onTransitionStart($event)"
+   (transitionDone)="onTransitionDone()">
+  </ngx-step-body>
+</div>

@@ -1,0 +1,22 @@
+:host {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+}
+
+.step-space-between {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.step-line {
+    flex: 1 1 auto;
+    display: block;
+    border-color: #bdbdbd;
+    margin-left: 14px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    margin-right: 14px;
+}

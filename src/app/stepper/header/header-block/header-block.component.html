@@ -1,0 +1,24 @@
+<div class="step" style="position: relative" [ngClass]="{'isActive':active, 'completed':completed}">
+
+    <span *ngIf="!completed" class="step-number">
+        <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"></circle>
+            <text x="12" y="16" text-anchor="middle" font-size="12" fill="#fff">   {{stepIndex+1}}</text>
+        </svg>
+    </span>
+
+    <span *ngIf="completed">
+        <svg viewBox="0 0 24 24"
+             class="step-number">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
+        </svg>
+    </span>
+
+    <div class="step-title">
+        <ng-content></ng-content>
+    </div>
+
+
+</div>
+
+<div *ngIf="!last && mode ==='vertical'" class="vertical-line"></div>
