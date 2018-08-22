@@ -3,7 +3,7 @@
 Simple and very easy to use Angular Stepper.
 <hr>
 
-[Demo](https://stackblitz.com/edit/github-uuksdt?embed=1&file=src/main.ts)
+[Demo](https://stackblitz.com/edit/github-3gabuq)
 
 <hr>
 
