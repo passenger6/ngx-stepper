@@ -1,6 +1,5 @@
 import {
   Component,
-  OnInit,
   TemplateRef,
   Input,
   ViewChild,
