@@ -1,12 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 
 import { AppComponent } from './app.component';
 import { NgStepperModule } from './stepper/stepper.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 
 
 @NgModule({
