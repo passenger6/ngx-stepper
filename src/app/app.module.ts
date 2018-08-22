@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { NgStepperModule } from './stepper/stepper.module';
+import { NgxStepperModule } from './stepper/stepper.module';
 
 
 @NgModule({
@@ -13,7 +13,7 @@ import { NgStepperModule } from './stepper/stepper.module';
   ],
   imports: [
     BrowserModule,
-    NgStepperModule,
+    NgxStepperModule,
     BrowserAnimationsModule
   ],
   providers: [],

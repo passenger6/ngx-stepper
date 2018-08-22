@@ -20,10 +20,10 @@ export class StepperComponent implements AfterContentChecked {
   stepCount = 0;
   position = 0;
   private _activeStep = 0;
-  private _stepBodyWrapperHeight: number;
+  private stepBodyWrapperHeight: number;
 
   @ContentChildren(StepComponent) steps: QueryList<StepComponent>;
-  @ViewChild('stepBodyWrapper') _stepBodyWrapper: ElementRef;
+  @ViewChild('stepBodyWrapper') stepBodyWrapper: ElementRef;
 
   @Input('activeStep') set activeStep(step: number) {
     this._activeStep = step;
@@ -51,14 +51,14 @@ export class StepperComponent implements AfterContentChecked {
   }
 
   onTransitionDone() {
-    this._stepBodyWrapperHeight = this._stepBodyWrapper.nativeElement.clientHeight;
-    this._renderer.setStyle(this._stepBodyWrapper.nativeElement, 'height', '');
+    this.stepBodyWrapperHeight = this.stepBodyWrapper.nativeElement.clientHeight;
+    this._renderer.setStyle(this.stepBodyWrapper.nativeElement, 'height', '');
   }
 
   onTransitionStart(height: number) {
-    this._renderer.setStyle(this._stepBodyWrapper.nativeElement, 'height', this._stepBodyWrapperHeight + 'px');
-    if (this._stepBodyWrapper.nativeElement.offsetHeight) {
-      this._renderer.setStyle(this._stepBodyWrapper.nativeElement, 'height', height + 'px');
+    this._renderer.setStyle(this.stepBodyWrapper.nativeElement, 'height', this.stepBodyWrapperHeight + 'px');
+    if (this.stepBodyWrapper.nativeElement.offsetHeight) {
+      this._renderer.setStyle(this.stepBodyWrapper.nativeElement, 'height', height + 'px');
     }
   }
 

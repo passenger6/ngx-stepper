@@ -11,7 +11,7 @@ Simple and very easy to use Angular Stepper.
 
 ```TypeScript
 //app.module.ts
-import { NgStepperModule } from 'ngx-stepper';
+import { NgxStepperModule } from 'ngx-stepper';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({

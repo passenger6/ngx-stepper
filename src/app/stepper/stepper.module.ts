@@ -32,4 +32,4 @@ import { HeaderBlockComponent } from './header/header-block/header-block.compone
   ],
   providers: [],
 })
-export class NgStepperModule { }
+export class NgxStepperModule { }

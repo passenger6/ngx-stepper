@@ -1,6 +1,7 @@
 <div *ngIf="showStepper">
 
-  <ngx-stepper #stepper class="stepper">
+  <ngx-stepper #stepper
+               class="stepper">
     <ngx-step [label]="'Setup your account'">
       <div>
         <label for="firtsName">First Name: </label>
@@ -16,20 +17,22 @@
       </div>
       <div>
         <label for="password">Password: </label>
-        <input type="password" name="password">
+        <input type="password"
+               name="password">
       </div>
     </ngx-step>
     <ngx-step [label]="'Privacy Policy'">
       <h1>Lorem ipsum dolor sit amet consectetuer adipiscing elit
       </h1>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
-        eget dolor. Aenean massa
-        <strong>strong</strong>. Cum sociis natoque penatibus et magnis dis parturient montes,
-        nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-        pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-        vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet
-        a, venenatis vitae, justo. Nullam dictum felis eu pede
-        <a class="external ext" href="#">link</a>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+        ligula eget dolor. Aenean massa
+        <strong>strong</strong>. Cum sociis natoque penatibus et magnis dis parturient
+        montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
+        eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo,
+        fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus
+        ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
+        <a class="external ext"
+           href="#">link</a>
         mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean
         vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae,
         eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat
@@ -40,10 +43,10 @@
       <h1>Lorem ipsum dolor sit amet consectetuer adipiscing elit
       </h1>
       <h2>Aenean commodo ligula eget dolor aenean massa</h2>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
-        eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
-        montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
-        eu, pretium quis, sem.</p>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+        ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+        parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+        pellentesque eu, pretium quis, sem.</p>
 
 
     </ngx-step>
@@ -108,18 +111,21 @@
   <button (click)="stepper.prev()">
     <-Back </button>
 
-      <button *ngIf="!stepper.lastStepActive" (click)="stepper.next()">
+      <button *ngIf="!stepper.lastStepActive"
+              (click)="stepper.next()">
         Next->
       </button>
 
 
 
-      <button *ngIf="stepper.lastStepActive" (click)="showStepper = false">
+      <button *ngIf="stepper.lastStepActive"
+              (click)="showStepper = false">
         I agree
       </button>
 </div>
 
-<div *ngIf="!showStepper" class="success">
+<div *ngIf="!showStepper"
+     class="success">
   <h1>Registration Successful!</h1>
   <button (click)="showStepper = true">back</button>
 </div>
