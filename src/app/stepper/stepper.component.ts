@@ -1,7 +1,5 @@
 import {
   Component,
-  OnInit,
-  AfterViewInit,
   QueryList,
   ContentChildren,
   AfterContentChecked,
